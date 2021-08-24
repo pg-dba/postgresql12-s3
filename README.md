@@ -1,4 +1,4 @@
-# postgresql12
+# postgresql12-s3
 
 https://hub.docker.com/_/postgres
 
