@@ -1,10 +1,11 @@
 #!/bin/bash
 
-if [[ ! -d /var/lib/postgresql/data ]]; then
-exec /docker-entrypoint.sh "$@" &
+if [[ ! -f /var/lib/postgresql/data/PG_VERSION ]]; then
+#exec /docker-entrypoint.sh "$@" &
+exec /usr/local/bin/docker-entrypoint.sh "$@" &
 fi
 
-while [[ ! -d /var/lib/postgresql/data ]]; do sleep 2; done
+while [[ ! -f /var/lib/postgresql/data/PG_VERSION ]]; do sleep 2; done
 
 aws configure --profile ${AWS_PROFILE_MINIO:-minio} set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
 aws configure --profile ${AWS_PROFILE_MINIO:-minio} set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"

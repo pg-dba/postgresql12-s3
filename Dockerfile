@@ -1,5 +1,7 @@
 FROM postgres:12
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update
 RUN apt-get -y install perl postgresql-plperl-12
 RUN apt-get -y install barman-cli awscli gosu
