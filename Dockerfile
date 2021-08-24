@@ -4,6 +4,8 @@ RUN apt-get update
 RUN apt-get -y install perl postgresql-plperl-12
 RUN apt-get -y install barman-cli awscli gosu
 
+RUN apt-get clean all
+
 WORKDIR /var/lib/postgresql
 
 COPY minio-entrypoint.sh /minio-entrypoint.sh
