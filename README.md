@@ -1,4 +1,4 @@
-# postgresql10-s3
+# postgresql12-s3
 
 https://hub.docker.com/_/postgres<BR>
 https://github.com/docker-library/docs/blob/master/postgres/README.md<BR>
@@ -22,7 +22,7 @@ barman-cloud-backup-list --endpoint-url ${MINIO_ENDPOINT_URL} s3://${MINIO_BACKE
 <BR><B>Environment</B><BR>
 
 https://www.postgresql.org/docs/current/app-initdb.html<BR>
-https://postgrespro.ru/docs/postgresql/10/app-initdb<BR>
+https://postgrespro.ru/docs/postgresql/12/app-initdb<BR>
 https://github.com/docker-library/postgres/blob/cf175692c137b00938f480b3ae1babae0999e05e/12/buster/docker-entrypoint.sh<BR>
 https://en.wikipedia.org/wiki/List_of_tz_database_time_zones<BR>
 
