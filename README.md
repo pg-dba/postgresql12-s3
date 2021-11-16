@@ -1,4 +1,4 @@
-# postgresql12-s3
+# postgresql10-s3
 
 https://hub.docker.com/_/postgres<BR>
 https://github.com/docker-library/docs/blob/master/postgres/README.md<BR>
