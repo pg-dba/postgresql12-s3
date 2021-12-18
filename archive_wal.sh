@@ -2,6 +2,7 @@
 # ARCHIVE=0 не спасает, если есть именованный replication_slots, например, barman
 # sudo -iu postgres psql -p 5432 postgres -c "SELECT * FROM pg_replication_slots;"
 # sudo -iu postgres psql -p 5432 postgres -c "SELECT pg_drop_replication_slot('barman');"
+#archive_command = '/bin/bash /var/lib/postgresql/data/archive_wal.sh %p %f'
 #chown postgres:postgres archive_wal.sh
 #chmod 700 archive_wal.sh
 
